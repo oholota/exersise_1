@@ -72,6 +72,7 @@ jobs:
           test -f build/car.txt
           grep "Engine" build/car.txt
           grep "car" build/spare_parts_car.txt
+          grep "car" build/spare_parts_car.txt
           echo "Car tests passed!"
 
   test_motorbike:
@@ -88,7 +89,7 @@ jobs:
         run: |
           test -f build/motorbike.txt
           grep "Fuel Tank" build/motorbike.txt
-          grep "motorbike" build/spare_parts_motorbike.txt
+          grep "motorbike" build/invoice_car.txt
           echo "Motorbike tests passed!"
     
   build_truck:
