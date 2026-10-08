@@ -91,6 +91,7 @@ jobs:
 
       - name: Test motorbike
         run: |
+          exit 1
           test -f build/motorbike.txt
           grep "Fuel Tank" build/motorbike.txt
           echo "Motorbike tests passed!"
