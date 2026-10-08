@@ -109,9 +109,12 @@ jobs:
           retention-days: 1
 
   test_truck:
-    needs: build_truck
     runs-on: ubuntu-latest
     steps:
+      - name: Wait for track
+        run: |
+          sleep: 25
+          
       - name: Download truck artifact
         uses: actions/download-artifact@v7
         with:
