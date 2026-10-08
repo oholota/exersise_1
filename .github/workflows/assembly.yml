@@ -113,7 +113,7 @@ jobs:
     steps:
       - name: Wait for track
         run: |
-          sleep: 2500
+          sleep 25
           
       - name: Download truck artifact
         uses: actions/download-artifact@v7
