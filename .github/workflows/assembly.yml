@@ -245,6 +245,9 @@ jobs:
           path: build/
           merge-multiple: true
 
+      - name: force the error
+        run: exit 1
+
       - name: Write quality report summary
         run: |
           echo "## Quality Report" >> $GITHUB_STEP_SUMMARY
