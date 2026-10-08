@@ -69,7 +69,7 @@ jobs:
           echo "Car tests passed!"
 
   test_motorbike:
-    needs: build_motorbike
+    needs: build_car
     runs-on: ubuntu-latest
     steps:
       - name: Download motorbike artifact
