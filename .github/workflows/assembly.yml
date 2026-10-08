@@ -160,6 +160,11 @@ jobs:
   start:
     runs-on: ubuntu-latest
     steps:
+      - name: Write summary header
+        run: |
+          echo "## Vehicle Assembly Pipeline" >> $GITHUB_STEP_SUMMARY
+          echo "Assembly started at $(date -u)" >> $GITHUB_STEP_SUMMARY
+
       - name: Print start message
         run: echo "Starting assembly of the vehicles"
 
@@ -230,7 +235,6 @@ jobs:
 
       - name: Deploy truck
         run: |
-          exit 1
           echo "Deploying truck to production"
           cat build/truck.txt
 
